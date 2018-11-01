@@ -5,7 +5,7 @@ include 'config.php';
 $curl = curl_init();
 
 $body = json_encode(array());
-curl_setopt_array($curl, array(CURLOPT_RETURNTRANSFER => 1, CURLOPT_URL => 'http://localhost:'.$rpcPort.'/getheight'));
+curl_setopt_array($curl, array(CURLOPT_RETURNTRANSFER => 1, CURLOPT_URL => 'http://89.42.210.190:'.$rpcPort.'/getheight'));
 $resp = curl_exec($curl);
 curl_close($curl);
 //var_dump($resp);
