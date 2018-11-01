@@ -1,0 +1,54 @@
+<div id="app" class="indexTab content">
+	<div class="mainBlock" >
+		<div class="actions" >
+			<img src="./assets/img/logo_white.png" alt="Hospitalcoin"/>
+			<div class="right">
+				<a href="#" @click="loadWallet()" v-if="hasLocalWallet" class="btn mini basic">Load my wallet</a>
+				<a href="#!import" class="btn mini">Import a wallet</a>
+				<a href="#!createWallet" class="btn mini">Create</a>
+			</div>
+		</div>
+		<div class="headline" >
+			<h1>Secured HospitalCoin Web Wallet</h1>
+			<h2>The simplest way to use Hospitalcoin, anywhere and any time</h2>
+		</div>
+		<div class="callToAction tc" >
+			<a href="#" @click="loadWallet()" v-if="hasLocalWallet" class="btn basic">Load my wallet</a>
+			<a href="#!createWallet" class="btn primary" >Create a wallet</a>
+		</div>
+	</div>
+
+	<div class="notesBlock" style="display:none">
+		<div class="container" >
+			<div class="notes" >
+				<div class="block">
+					<i class="fa fa-lock" aria-hidden="true"></i><br/>
+					<h3>Secure</h3>
+					<h4>No servers, fully encrypted !</h4>
+				</div>
+			</div>
+			<div class="notes" >
+				<div class="block">
+					<i class="fa fa-paper-plane" aria-hidden="true"></i><br/>
+					<h3>Fast</h3>
+					<h4>Send Everywhere, Anytime!</h4>
+				</div>
+			</div>
+			<div class="notes" >
+				<div class="block">
+					<i class="fa fa-arrows-v" aria-hidden="true"></i><br/>
+					<h3>Unique technology</h3>
+					<h4>Connected directly on the Hospitalcoin Blockchain !</h4>
+				</div>
+			</div>
+			<div class="notes" >
+				<div class="block">
+					<i class="fa fa-folder-open-o" aria-hidden="true"></i><br/>
+					<h3>Fully open-source</h3>
+					<a href="https://github.com/HospitalCoin/hospitalcoin-web-wallet" target="_blank" rel="nofollow"><h4>Available on github</h4></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

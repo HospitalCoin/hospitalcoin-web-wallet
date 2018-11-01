@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<button id="payButton" disabled="disabled">Pay</button>
+
+
+<script src="api.js" ></script>
+
+<script>
+	var clickButton = document.getElementById('payButton');
+
+	function HospitalCoinLoaded(){
+		clickButton.disabled = false;
+		clickButton.addEventListener("click", function(){
+		    HospApi.makeTransfer({
+				amount:10,
+				address: 'wallet.hospitalcoin.net',
+				description:'Description',
+				destName:'Webwallet',
+				redirect:encodeURIComponent(window.location.href)
+			}).then(function(txHash){
+
+			});
+		});
+
+		console.log('LOADED CALLBACK');
+		HospApi.hasWallet().then(function (hasWAllet) {
+			console.log('HAS WALLET');
+			console.log(hasWAllet);
+		});
+	}
+	HospApi.init().then(HospitalCoinLoaded);
+
+</script>
+
+</body>
+</html>

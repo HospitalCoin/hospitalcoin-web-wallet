@@ -1,0 +1,23 @@
+{
+  "name": "hospitalcoinwebwallet",
+  "version": "1.0.0",
+  "description": "Fully client side web wallet for hospital coin",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^2.6.2",
+    "workbox-build": "^3.2.0"
+  },
+  "devDependencies": {
+    "ts-node": "^7.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HospitalCoin/hospitalcoin-web-wallet.git"
+  },
+  "author": "HospDev",
+  "license": "BSD-3",
+  "bugs": {
+    "url": "https://github.com/HospitalCoin/hospitalcoin-web-wallet/issues"
+  },
+  "homepage": "https://github.com/HospitalCoin/hospitalcoin-web-wallet#readme"
+}

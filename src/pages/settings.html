@@ -1,0 +1,65 @@
+<div id="app" class="body-root">
+	<div class="body-header" >
+		<div class="header-title">
+			<i class="fa fa-cog" aria-hidden="true"></i> Settings
+		</div>
+		<div class="header-subtitle" >
+			Change your parameters here
+		</div>
+	</div>
+	<div class="body-content" >
+		<div class="panel">
+			<div class="body" >
+				<div class="content" >
+					<div class="field">
+						<label>Speed to update the wallet (will consume more energy)</label>
+						<select v-model="readSpeed" >
+							<option value="0" >Fastest</option>
+							<option value="10" >Fast</option>
+							<option value="50" >Medium</option>
+							<option value="100" >Slow</option>
+						</select>
+					</div>
+					<div class="field checkbox toggle">
+						<input type="checkbox" name="public" v-model="checkMinerTx">
+						<label>Read miner transactions (only for people solo mining)</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel inline">
+			<div class="body" >
+				<div class="content tc" >
+					<a href="#!changeWalletPassword" class="btn" >Change my wallet password</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel inline">
+			<div class="body" >
+				<div class="content tc" >
+					<button class="btn" @click="deleteWallet()" >Delete my wallet (local copy)</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel">
+			<div class="body" >
+				<div class="content" >
+					<div class="field">
+						<label>Creation height of the wallet</label>
+						<input type="number" v-model="creationHeight" />
+					</div>
+					<div class="field">
+						<label>Current scanning height</label>
+						<input type="number" v-model="scanHeight" />
+					</div>
+					<div class="actions tc">
+						<button @click="updateWalletSettings()" class="btn" >Update</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
