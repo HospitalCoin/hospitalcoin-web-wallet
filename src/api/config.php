@@ -2,5 +2,5 @@
 
 $testnet = false;
 $cacheLocation = $testnet ? 'cache-testnet' : 'cache';
-$rpcPort = $testnet ? 12346 : 12346;
+$rpcPort = $testnet ? 25670 : 25670;
 $coinSymbol = 'hosp';
